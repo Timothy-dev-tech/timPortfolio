@@ -30,4 +30,4 @@ Currently in development
 - Continuously improve and expand the portfolio
 
 ## Preview
-*Screenshot coming soon*
+<img width="1346" height="718" alt="image" src="https://github.com/user-attachments/assets/c6dc4194-8dd2-49a4-8edd-07b817b4bd17" />
