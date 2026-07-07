@@ -1,6 +1,6 @@
 # Timothy Muthuri — Portfolio v1
 
-🔗 Live Site: *coming soon*
+🔗 Live Site: https://timothy-dev-tech.github.io/timPortfolio/
 
 A personal portfolio website built from scratch using HTML, CSS, and JavaScript.
 Showcasing my journey as a CS student and frontend developer — with a focus on
