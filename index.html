@@ -22,8 +22,7 @@
         <nav class="site-nav" id="site-nav">
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#what-i-do">What I Do</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#resume">Resume</a></li>
@@ -84,67 +83,59 @@
         </div>
       </section>
 
-      <!-- WHAT I DO -->
-      <section id="what-i-do">
+      <!-- SERVICES -->
+      <section id="services">
         <div class="container">
-          <div class="what-i-do-content">
-            <h2>What I Do</h2>
-            <ul>
-              <li>Design and build responsive websites for businesses</li>
-              <li>
-                Create clean and functional interfaces for web applications
+          <div class="services-content">
+            <h2>Services</h2>
+            <ul class="services-list">
+              <li class="service-item">
+                <span class="service-item__number">01</span>
+                <div class="service-item__body">
+                  <h3>Website Design &amp; Development</h3>
+                  <p>
+                    Responsive, from-scratch sites for businesses and personal
+                    brands, built with clean HTML/CSS.
+                  </p>
+                  <ul class="service-item__tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Responsive Web Design</li>
+                  </ul>
+                </div>
               </li>
-              <li>Write structured, maintainable HTML and CSS from scratch</li>
+              <li class="service-item">
+                <span class="service-item__number">02</span>
+                <div class="service-item__body">
+                  <h3>Web App Interfaces</h3>
+                  <p>
+                    Frontend interfaces for web applications, from static
+                    layouts to interactive, stateful UI.
+                  </p>
+                  <ul class="service-item__tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="service-item">
+                <span class="service-item__number">03</span>
+                <div class="service-item__body">
+                  <h3>Website Maintenance &amp; Repair</h3>
+                  <p>
+                    Updates, fixes, and improvements to existing sites — content
+                    changes, responsive fixes, accessibility passes.
+                  </p>
+                  <ul class="service-item__tags">
+                    <li>Git &amp; GitHub</li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- RESUME -->
-      <section id="resume">
-        <div class="container">
-          <div class="resume-content">
-            <h2>Resume</h2>
-            <p>
-              View my full professional background, or download a copy for your
-              records.
-            </p>
-            <div class="resume-actions">
-              <a
-                href="assets/resume-timothy-muthuri.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="resume-action"
-              >
-                View Resume
-              </a>
-              <a
-                href="assets/resume-timothy-muthuri.pdf"
-                download
-                class="resume-action"
-              >
-                Download Resume
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- SKILLS -->
-      <section id="skills">
-        <div class="container">
-          <div class="skills-content">
-            <h2>Skills</h2>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Responsive Web Design</li>
-              <li>Git &amp; GitHub</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
       <!-- PROJECTS -->
       <section id="projects">
         <div class="container">
@@ -173,8 +164,8 @@
                     </a>
                   </h3>
                   <p>
-                    A responsive portfolio website built from scratch using HTML
-                    and CSS. Created to document my growth, showcase my work,
+                    A responsive portfolio website built using HTML, CSS and
+                    JAVASCRIPT. Created to document my growth, showcase my work,
                     and apply frontend development principles in a real-world
                     project.
                   </p>
@@ -205,7 +196,11 @@
                 </a>
                 <div class="project-card__body">
                   <h3>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://timothy-dev-tech.github.io/Karatina-tech-repair/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Karatina Tech & Repair
                     </a>
                   </h3>
@@ -241,7 +236,11 @@
                 </a>
                 <div class="project-card__body">
                   <h3>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://timothy-dev-tech.github.io/LOGIN-PAGE-PROJECT/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Login Page Project
                     </a>
                   </h3>
@@ -264,46 +263,223 @@
           </div>
         </div>
       </section>
+      <!-- RESUME -->
+      <section id="resume">
+        <div class="container">
+          <div class="resume-content">
+            <h2>Resume</h2>
+            <p>
+              View my full professional background, or download a copy for your
+              records.
+            </p>
+            <div class="resume-actions">
+              <a
+                href="assets/Timothy-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="resume-action"
+              >
+                View Resume
+              </a>
+              <a
+                href="assets/Timothy-resume.pdf"
+                download
+                class="resume-action"
+              >
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CONTACT -->
       <section id="contact">
         <div class="container">
           <div class="contact-content">
             <h2>Contact</h2>
-            <p>
+            <p class="contact-lead">
               Interested in working together, discussing a project, or
               connecting professionally? Feel free to reach out.
             </p>
 
-            <p>
-              Email:
-              <a href="mailto:timothyanamba7@gmail.com">
-                timothyanamba7@gmail.com
-              </a>
-            </p>
+            <div class="contact-layout">
+              <div class="contact-info">
+                <ul class="social-links">
+                  <li>
+                    <a
+                      href="https://github.com/Timothy-dev-Tech"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                      GitHub
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://linkedin.com/in/timothy-anamba"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                        ></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:timothyanamba7@gmail.com">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                        ></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                      Email
+                    </a>
+                  </li>
+                </ul>
 
-            <p>
-              GitHub:
-              <a
-                href="https://github.com/Timothy-dev-Tech"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                github.com/Timothy-dev-Tech
-              </a>
-            </p>
+                <p class="contact-status">
+                  Currently open to internship and junior frontend developer
+                  opportunities.
+                </p>
+              </div>
 
-            <p>
-              Currently open to internship and junior frontend developer
-              opportunities.
-            </p>
+              <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                  <label for="contact-name">Name</label>
+                  <input type="text" id="contact-name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-message">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
       <div class="container">
+        <ul class="footer-social">
+          <li>
+            <a
+              href="https://github.com/Timothy-dev-Tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:timothyanamba7@gmail.com" aria-label="Email">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </li>
+        </ul>
         <p>&copy; 2026 Timothy Muthuri. All rights reserved.</p>
       </div>
     </footer>
