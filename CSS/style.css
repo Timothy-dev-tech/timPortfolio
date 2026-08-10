@@ -50,12 +50,12 @@ a {
 
 :root {
   /* Colors */
-  --color-bg: #15131C;
-  --color-surface: #1E1B29;
-  --color-text: #EDEAF5;
-  --color-muted: #9893AB;
-  --color-accent: #7C5CFC;
-  --color-border: #2D2A3B;
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-text: #211D1A;
+  --color-muted: #6F6A63;
+  --color-accent: #E08A45;
+  --color-border: #E4DED5;
 
   /* Typography */
   --font-heading: "Space Grotesk", sans-serif;
@@ -73,6 +73,7 @@ a {
   /* Layout */
   --container-width: 800px;
   --section-spacing: 6rem;
+  --header-height: 4.5rem;
 
   /* Radius */
   --radius-md: 0.75rem;
@@ -80,7 +81,6 @@ a {
   /* Motion */
   --transition: 200ms ease;
 }
-
 /* BASE */
 body {
   background-color: var(--color-bg);
@@ -113,6 +113,147 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+/* SITE HEADER */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+}
+
+.site-header__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.logo__accent {
+  color: var(--color-accent);
+}
+
+.site-nav ul {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.site-nav a {
+  position: relative;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.site-nav a:hover {
+  color: var(--color-text);
+}
+.site-nav a:hover::after {
+  transform: scaleX(1);
+}
+.site-nav a.active {
+  color: var(--color-text);
+}
+
+.site-nav a.active::after {
+  transform: scaleX(1);
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.nav-toggle__bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+
+    /* Animate height without arbitrary max-height */
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows var(--transition), visibility var(--transition);
+  }
+
+  .site-nav[data-open="true"] {
+    grid-template-rows: 1fr;
+    visibility: visible;
+  }
+
+  .site-nav > ul {
+    overflow: hidden;
+    min-height: 0; /* required for 0fr to collapse */
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .site-nav li {
+    padding-block: var(--space-xs);
+  }
+}
 .container {
   width: 100%;
   max-width: var(--container-width);
@@ -122,11 +263,12 @@ button:focus-visible {
 
 /* HERO */
 
-header {
+.hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding-block: var(--space-2xl);
+  scroll-margin-top: var(--header-height);
 }
 
 .hero-content {
@@ -162,6 +304,7 @@ header {
 
 main section {
   padding-block: var(--section-spacing);
+  scroll-margin-top: var(--header-height); 
 }
 
 main section h2 {

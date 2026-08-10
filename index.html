@@ -1,133 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timothy Muthuri | Frontend Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timothy Muthuri | Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="#home" class="logo" aria-label="Timothy Muthuri — Home"
+          >T<span class="logo__accent">M</span></a
+        >
 
-  <!-- HERO -->
-  <header>
-    <div class="container"> 
-     <div class="hero-content"> 
-        <h1>Timothy Muthuri</h1>
-        <h2>CS Student <span class="arrow">&rarr;</span> Frontend Developer</h2>
-        <p>
-          I build clean, responsive web interfaces for business websites and web applications &mdash; with HTML, CSS.
-        </p>
-     </div>
-    </div>
-  </header>
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#what-i-do">What I Do</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
-<main>
-  <!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="about-content">
-      <h2>About</h2>
-      <p>
-        I'm a Computer Science student at Karatina University with a growing 
-        focus on frontend development. I build clean, responsive, and purposeful 
-        web interfaces.
-      </p>
-      <p>
-        Right now, I'm strengthening my foundations in HTML and CSS by building 
-        real projects from scratch.
-      </p>
-      <p>
-        This portfolio is one of those projects &mdash; a space to document my 
-        growth, showcase my work, and apply what I learn.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT I DO -->
-  <section id="what-i-do">
-    <div class="container">
-      <div class="what-i-do-content">
-        <h2>What I Do</h2>
-        <ul>
-          <li>Design and build responsive websites for businesses</li>
-          <li>Create clean and functional interfaces for web applications</li>
-          <li>Write structured, maintainable HTML and CSS from scratch</li>
-        </ul>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <div class="skills-content">
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Responsive Web Design</li>
-          <li>Git &amp; GitHub</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- HERO -->
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <div class="projects-content">
-        <h2>Projects</h2>
-
-        <article class="project-card">
-          <h3>Personal Portfolio</h3>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Timothy Muthuri</h1>
+          <h2>
+            CS Student <span class="arrow">&rarr;</span> Frontend Developer
+          </h2>
           <p>
-            A responsive portfolio website built from scratch using HTML and CSS. Created to document my growth, showcase my projects, and apply frontend development principles in a real-world project.
+            I build clean, responsive web interfaces for business websites and
+            web applications &mdash; with HTML, CSS.
           </p>
-        </article>
-
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-content">
-        <h2>Contact</h2>
-        <p>
-          Interested in working together, discussing a project, or connecting 
-          professionally? Feel free to reach out.
-        </p>
+    <main>
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="container">
+          <div class="about-content">
+            <h2>About</h2>
+            <p>
+              I'm a Computer Science student at Karatina University with a
+              growing focus on frontend development. I build clean, responsive,
+              and purposeful web interfaces.
+            </p>
+            <p>
+              Right now, I'm strengthening my foundations in HTML and CSS by
+              building real projects from scratch.
+            </p>
+            <p>
+              This portfolio is one of those projects &mdash; a space to
+              document my growth, showcase my work, and apply what I learn.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <p>
-          Email:
-          <a href="mailto:timothyanamba7@gmail.com">
-            timothyanamba7@gmail.com
-          </a>
-        </p>
+      <!-- WHAT I DO -->
+      <section id="what-i-do">
+        <div class="container">
+          <div class="what-i-do-content">
+            <h2>What I Do</h2>
+            <ul>
+              <li>Design and build responsive websites for businesses</li>
+              <li>
+                Create clean and functional interfaces for web applications
+              </li>
+              <li>Write structured, maintainable HTML and CSS from scratch</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <p>
-          GitHub:
-          <a href="https://github.com/Timothy-dev-Tech" target="_blank" rel="noopener noreferrer">
-            github.com/Timothy-dev-Tech
-          </a>
-        </p>
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="container">
+          <div class="skills-content">
+            <h2>Skills</h2>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Responsive Web Design</li>
+              <li>Git &amp; GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <p>Currently open to internship and junior frontend developer opportunities.</p>
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="container">
+          <div class="projects-content">
+            <h2>Projects</h2>
+
+            <article class="project-card">
+              <h3>Personal Portfolio</h3>
+              <p>
+                A responsive portfolio website built from scratch using HTML and
+                CSS. Created to document my growth, showcase my projects, and
+                apply frontend development principles in a real-world project.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact-content">
+            <h2>Contact</h2>
+            <p>
+              Interested in working together, discussing a project, or
+              connecting professionally? Feel free to reach out.
+            </p>
+
+            <p>
+              Email:
+              <a href="mailto:timothyanamba7@gmail.com">
+                timothyanamba7@gmail.com
+              </a>
+            </p>
+
+            <p>
+              GitHub:
+              <a
+                href="https://github.com/Timothy-dev-Tech"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/Timothy-dev-Tech
+              </a>
+            </p>
+
+            <p>
+              Currently open to internship and junior frontend developer
+              opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Timothy Muthuri. All rights reserved.</p>
       </div>
-    </div>
-  </section>
-</main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Timothy Muthuri. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
 </html>
