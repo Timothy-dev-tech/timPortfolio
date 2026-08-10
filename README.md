@@ -9,8 +9,7 @@ clean design, responsiveness, and user experience.
 ## Tech Stack
 - HTML
 - CSS
-- JavaScript(planned)
-- React (planned)
+- JavaScript
 
 ## Sections
 - Hero
