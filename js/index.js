@@ -1,17 +1,30 @@
 const navToggle = document.getElementById('nav-toggle');
 const siteNav = document.getElementById('site-nav');
 
+function setNavigationState(isOpen) {
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+  siteNav.setAttribute('data-open', String(isOpen));
+}
+
 navToggle.addEventListener('click', () => {
   const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-  navToggle.setAttribute('aria-expanded', String(!isOpen));
-  siteNav.setAttribute('data-open', String(!isOpen));
+  setNavigationState(!isOpen);
 });
 
 siteNav.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
-    navToggle.setAttribute('aria-expanded', 'false');
-    siteNav.setAttribute('data-open', 'false');
+    setNavigationState(false);
   });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (
+    event.key === 'Escape' &&
+    navToggle.getAttribute('aria-expanded') === 'true'
+  ) {
+    setNavigationState(false);
+    navToggle.focus();
+  }
 });
 
 // Active nav link on scroll

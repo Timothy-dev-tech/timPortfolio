@@ -68,7 +68,7 @@ a {
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
   --space-xl: 3rem;
-  --space-2xl: 3rem;
+  --space-2xl: 4.5rem;
 
   /* Layout */
   --container-width: 800px;
@@ -609,10 +609,11 @@ main section h2 {
   transition: border-color var(--transition);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
   border-color: var(--color-accent);
-  outline: none;
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+  outline-offset: 2px;
 }
 
 .form-group textarea {
@@ -647,7 +648,6 @@ main section h2 {
     gap: var(--space-2xl);
   }
 }
-/* FOOTER */
 
 /* FOOTER */
 
@@ -712,8 +712,5 @@ footer p {
   main section h2 {
     font-size: 1.5rem;
   }
-
-  .project-card {
-    padding: var(--space-md);
-  }
+  
 }
