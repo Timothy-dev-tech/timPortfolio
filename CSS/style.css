@@ -411,7 +411,7 @@ main section h2 {
 
 .resume-action:hover {
   border-color: var(--color-accent);
-  color: #000;
+  color: var(--color-text);
   background: var(--color-accent);
 }
 
@@ -636,7 +636,7 @@ main section h2 {
 
 .form-submit:hover {
   border-color: var(--color-accent);
-  color: #000;
+  color: var(--color-text);
   background: var(--color-accent);
 }
 
