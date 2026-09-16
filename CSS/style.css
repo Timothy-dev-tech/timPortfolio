@@ -31,21 +31,6 @@ a {
   text-decoration: none;
 }
 
-/* Respect reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
 /* DESIGN TOKENS */
 
 :root {
@@ -216,44 +201,6 @@ button:focus-visible {
 .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
-
-@media (max-width: 767px) {
-  .nav-toggle {
-    display: flex;
-  }
-
-  .site-nav {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    width: 100%;
-    background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-
-    /* Animate height without arbitrary max-height */
-    display: grid;
-    grid-template-rows: 0fr;
-    visibility: hidden;
-    transition: grid-template-rows var(--transition), visibility var(--transition);
-  }
-
-  .site-nav[data-open="true"] {
-    grid-template-rows: 1fr;
-    visibility: visible;
-  }
-
-  .site-nav > ul {
-    overflow: hidden;
-    min-height: 0; /* required for 0fr to collapse */
-    flex-direction: column;
-    gap: 0;
-    padding: var(--space-sm) var(--space-md);
-  }
-
-  .site-nav li {
-    padding-block: var(--space-xs);
-  }
-}
 .container {
   width: 100%;
   max-width: var(--container-width);
@@ -414,12 +361,6 @@ main section h2 {
   color: var(--color-text);
   background: var(--color-accent);
 }
-
-@media (min-width: 768px) {
-  .resume-actions {
-    flex-direction: row;
-  }
-}
 /* PROJECTS */
 
 .projects-grid {
@@ -483,27 +424,6 @@ main section h2 {
 
 .project-card__live-link:hover {
   border-bottom-color: var(--color-accent);
-}
-
-/* 768px: 2-column grid */
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* 1024px+: tighter spacing, same 2-column layout inside 800px container */
-@media (min-width: 1024px) {
-  .projects-grid {
-    gap: var(--space-xl);
-  }
-}
-
-/* Mobile padding reduction */
-@media (max-width: 600px) {
-  .project-card__body {
-    padding: var(--space-md);
-  }
 }
 /* CONTACT */
 
@@ -640,15 +560,6 @@ main section h2 {
   background: var(--color-accent);
 }
 
-/* 1024px+: side-by-side with form getting more room */
-@media (min-width: 1024px) {
-  .contact-layout {
-    grid-template-columns: 1fr 1.5fr;
-    align-items: start;
-    gap: var(--space-2xl);
-  }
-}
-
 /* FOOTER */
 
 footer {
@@ -690,8 +601,27 @@ footer p {
   width: 1.125rem;
   height: 1.125rem;
 }
-/* RESPONSIVE */
 
+/* MEDIA QUERIES
+   All breakpoints for the file live here, together, ordered smallest to
+   largest. Each block is listed once — no breakpoint repeats.*/
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Small screens: max-width 600px */
 @media (max-width: 600px) {
   :root {
     --section-spacing: 4rem;
@@ -712,5 +642,71 @@ footer p {
   main section h2 {
     font-size: 1.5rem;
   }
-  
+
+  .project-card__body {
+    padding: var(--space-md);
+  }
+}
+
+/* Mobile nav breakpoint: max-width 767px */
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+
+    /* Animate height without arbitrary max-height */
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows var(--transition), visibility var(--transition);
+  }
+
+  .site-nav[data-open="true"] {
+    grid-template-rows: 1fr;
+    visibility: visible;
+  }
+
+  .site-nav > ul {
+    overflow: hidden;
+    min-height: 0; /* required for 0fr to collapse */
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .site-nav li {
+    padding-block: var(--space-xs);
+  }
+}
+
+/* Tablet and up: min-width 768px */
+@media (min-width: 768px) {
+  .resume-actions {
+    flex-direction: row;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop and up: min-width 1024px */
+@media (min-width: 1024px) {
+  .projects-grid {
+    gap: var(--space-xl);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+    gap: var(--space-2xl);
+  }
 }
